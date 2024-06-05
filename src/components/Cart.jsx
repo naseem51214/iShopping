@@ -13,7 +13,7 @@ const Cart = () => {
     <>
       <ToastContainer />
 
-      <div className="container text-center my-5" style={{ width: "700px" }}>
+      <div className="container text-center my-5" >
         {cartItem.length == 0 && (
           <>
             <h1>Your Cart is Empty</h1>
@@ -24,7 +24,12 @@ const Cart = () => {
         )}
 
         {cartItem.map((item) => (
-          <div key={item.id} className="container my-5">
+          <div key={item.id} className="container my-5"
+          style={{
+            display:"flex",
+            justifyContent:"center",
+            alignItems:"center"
+          }}>
             <div
               className="card mb-3  text-center"
               style={{ width: "650px" }}
@@ -36,7 +41,7 @@ const Cart = () => {
                       src={item.image}
                       className="img-fluid rounded-start"
                       alt="..."
-                      style={{ borderRadius: "10px" }}
+                      style={{ borderRadius: "10px"  }}
                     />
                   </div>
                 </div>

@@ -14,9 +14,14 @@ function Product() {
   return (
     <>
       <div className="container" >
-        <div className="row">
+        <div className="row" >
           {Products.map((item) => (
-            <div key={item.id} className="container col-md-4 my-5">
+            <div key={item.id} className="container col-md-4 my-5" 
+            style={{
+              display:"flex",
+              justifyContent:"center",
+              alignItems:"center"
+            }}>
               <div className="card " style={{ width: "18rem" }}>
                 <div className="p-3 d-flex justify-content-center align-items-center">
                 <img src={item.image} className=" card-img-top" alt="..." style={{

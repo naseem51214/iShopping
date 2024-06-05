@@ -11,7 +11,13 @@ function Navbar() {
   return (
     <>
     
-      <div className="nav-bar sticky-top">
+      <div className="nav-bar sticky-top " style={
+        {
+          display:"flex",
+          justifyContent:"space-between",
+          alignItems:"center",
+        }
+      }>
         <Link to={"/"} className="left" style={{
             textDecoration:"none",
             color:"white",
@@ -24,7 +30,7 @@ function Navbar() {
         </Link>
         <div className="middle">
           <button className="btn btn-warning">
-            <h6>Total Price = {totalPrice}{" USD"}</h6>
+            <h7>Total Price = {totalPrice}{" USD"}</h7>
           </button>
         </div>
         <Link to={"/cart"} className="right">
